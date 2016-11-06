@@ -1,0 +1,2817 @@
+{
+  "luis_schema_version": "1.3.0",
+  "name": "Notifyme",
+  "desc": "",
+  "culture": "zh-cn",
+  "intents": [
+    {
+      "name": "None"
+    },
+    {
+      "name": "列出行程"
+    },
+    {
+      "name": "新增事件"
+    },
+    {
+      "name": "詢問功能"
+    }
+  ],
+  "entities": [
+    {
+      "name": "日期"
+    },
+    {
+      "name": "時間"
+    }
+  ],
+  "composites": [],
+  "bing_entities": [],
+  "actions": [],
+  "model_features": [],
+  "regex_features": [],
+  "utterances": [
+    {
+      "text": "11/8 早上8點 拿駕照",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "12/5 17:55 吃飯",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "我能做什麼",
+      "intent": "詢問功能",
+      "entities": []
+    },
+    {
+      "text": "11月8號晚上5點家具",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "11/5 18:0 吃飯",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "明天9:00和同學吃飯",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "5分後找人",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "明天中午考試",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        },
+        {
+          "entity": "時間",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "11/5 18:50 吃飯",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "今天吃宵夜",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "今天晚上開會",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "好餓",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "後天晚上七點念書",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        },
+        {
+          "entity": "時間",
+          "startPos": 2,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "明天下午午餐",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        },
+        {
+          "entity": "時間",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "1/3 18:00 吃飯",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "明天中午沒事",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        },
+        {
+          "entity": "時間",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "幫助",
+      "intent": "詢問功能",
+      "entities": []
+    },
+    {
+      "text": "QAQ",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "明天晚上6點吃飯",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "今天下午吃飯",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "明天早上吃飯",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        },
+        {
+          "entity": "時間",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "今天晚上九點約會",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        },
+        {
+          "entity": "時間",
+          "startPos": 2,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "今天 12:50 買早餐",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "11/8 1344 吃飯",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "今天晚上7點看醫生",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "今天 5:00 洗衣服",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "明天 1800 吃飯",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        },
+        {
+          "entity": "時間",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": ".11/3 8:50 吃飯",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "30分鐘後吃飯",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "新增事件",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "後天上午吃早餐",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        },
+        {
+          "entity": "時間",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "明天 5:30 PM 吃飯",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "今天晚上六點半找人",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        },
+        {
+          "entity": "時間",
+          "startPos": 2,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "妳好",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "明天 下午3點 洗澡",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "12/10 1800 吃飯",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "yes",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "明天 12:00 吃飯",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "明天 17:21 吃飯",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "11/18 1200 洗衣服",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "11/9 1800 找人",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "明天 早上 約會",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "明天下午4點半開車接人",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "1234667",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "明天早上七點吃飯",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        },
+        {
+          "entity": "時間",
+          "startPos": 2,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "今天 5:00 吃飯",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "看醫生在11/2 1800",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "11/8 18:00 洗衣服",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "11/3 8:50 吃飯",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "11/18 中午 午餐",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "看看廣告哦",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "幹",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "12/11 8:30 和朋友吃飯",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "明天晚上meeting",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        },
+        {
+          "entity": "時間",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "12/1 2000 幫狗狗洗澡",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "11/7 0700 早餐",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "11/2 17:23 看醫生",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "11/8 中午 午餐",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "今天晚上約會",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        },
+        {
+          "entity": "時間",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "今天晚上六點看醫生",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "11/2 1800 吃晚餐",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "11/7 1200 午餐",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "11/5 9:00 吃飯",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "今天晚上下課",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "今天晚上6點看醫生",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "11/10 14:00 交報告",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "明天 9:25 吃飯",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "11/3 下午 吃飯",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "11/5 1850 吃飯",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "今天 1800 吃飯",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "11/4 0741 吃飯",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "我可以做什麼?",
+      "intent": "詢問功能",
+      "entities": []
+    },
+    {
+      "text": "今天1800晚餐",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "11/15 1800 吃飯",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "5:44打球",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "11/25 1200 吃飯",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "11/3 1900 買東西",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "今天晚上9點看醫生",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "今天 6點 吃晚餐",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "11/15 1100 吃飯",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "明天 9點 吃飯",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "3月5日上午六點上課",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "明天早上9點看醫生",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "明天早上8點吃飯",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "測試sd",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "明天下午五點提醒我寄信",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "妳能做什麼",
+      "intent": "詢問功能",
+      "entities": []
+    },
+    {
+      "text": "明天0800吃飯",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "明天中午吃午餐",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        },
+        {
+          "entity": "時間",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "妳可以做什麼?",
+      "intent": "詢問功能",
+      "entities": []
+    },
+    {
+      "text": "今天行程",
+      "intent": "列出行程",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "明天行程",
+      "intent": "列出行程",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "今天的事情",
+      "intent": "列出行程",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "今天的活動",
+      "intent": "列出行程",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "列出行程",
+      "intent": "列出行程",
+      "entities": []
+    },
+    {
+      "text": "11/6 晚上 吃飯",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "11/15 0800 吃飯",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "11/5 18:00 吃午餐",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "11/15 1100 家具",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "11/5 18:00",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "11/15 18:11",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "11/15 18:00",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "11/10 18:00",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "11/4 18:00",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "11/5 18:00 吃飯",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "11/4 1200 鄭薇",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "11/2 1800吃晚餐",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "11/5",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "11/2 1800 測試訊息",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "安安安安",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "10/13 1309 測試1309",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "1/4 1200 活動紀錄",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "Ssi",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "11/5 18:00 說話啊",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "11/18 下午 吃飯泛",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "10/14 1540 test",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "10/14 1145 測試1145",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "11/10 吃飯",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "10/13 1345 測試1345",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "11/8 1800 幹",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "11/13 10:00 吃飯",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "11/5 1800 t泛",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "11/13 1900 家具",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "10/25 1138 吃晚餐",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "10/14 1200 吃飯",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "10/14 1800 測試",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "11/5 18:00 吃晚餐",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "新增",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "11/4 1800 吃飯",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "11/2 1600 找人",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "ya",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "你可以做甚麼？",
+      "intent": "詢問功能",
+      "entities": []
+    },
+    {
+      "text": "hello",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "10/13 1302 測試",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "10/14 1200 鄭薇",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "10/13 1344 測試1344",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "11/13",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "嗯欸欸全球其實",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "11/5 8:50 吃飯",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "講話啊!",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "10/13 1100 活動紀錄",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "no",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "11/4 1200 活動紀錄",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "11/4 1200 吃飯",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "10/15 0941 草食",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "10443",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "查詢",
+      "intent": "列出行程",
+      "entities": []
+    },
+    {
+      "text": "11/18 1800 看醫生",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "10/14 1100 鄭薇",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "11/8",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "今天早上五點吃飯",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        },
+        {
+          "entity": "時間",
+          "startPos": 2,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "11/6 1400 聚會",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "HI",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "明天 中午 吃飯",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        },
+        {
+          "entity": "時間",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "Hihi",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "11/8 吃飯",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "讚讚",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "查看",
+      "intent": "列出行程",
+      "entities": []
+    },
+    {
+      "text": "1/3 1800 明年",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "看醫生在11/21800",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "11/5 下午 吃飯",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "一小時後叫我",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "10/14 1546 設施",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "10/14 1500 測試",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "11/15 1300 吃飯",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "10/14 0857 測試",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "ˇˇ11",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "10/14 1255 測試2",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "明天早上10點吃飯",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "ji",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "@@",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "Hi",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "161",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "現在 吃飯",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "11/18 下午 吃飯",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "11/18 1800 吃飯",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "10/13 1310 測試1310",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "504su3xl",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "Yo",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "I didn't understand. Please answer 'yes' or 'no'.",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "10/14 1300 test1300",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "2:50 吃飯",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "時間",
+          "startPos": 0,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "10/13 1305 1305通知",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "10/13 1321 測試1321",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "1; 5j4",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "你好",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "10/13 1350 起床囉",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "明天 九點半 吃飯",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "10/13 1300 活動紀錄",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "10/11 0900 吃飯",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "459",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "13/13 1345 測試1345",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "10/13 1308 測試1308",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "1:30 吃飯",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "時間",
+          "startPos": 0,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "rgergerg",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "10/15 0941 吃飯",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "10/13 1306 1306通知",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "115/",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "10/13 1800 L停集合",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "1/4 1200 鄭薇",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "10/13 1256 測試",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "help",
+      "intent": "詢問功能",
+      "entities": []
+    },
+    {
+      "text": "10/13 下午三點 下課",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "11/8 下午 吃飯",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "11/5 18:00 test",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "'幫助",
+      "intent": "詢問功能",
+      "entities": []
+    },
+    {
+      "text": "10/12 0900 生日",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "10/13 1330 通知測試1330",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "11/18 1800 記得看醫生",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "10/12 1800 過期",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "明天中午吃飯",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        },
+        {
+          "entity": "時間",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "後天下午三點約會",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        },
+        {
+          "entity": "時間",
+          "startPos": 2,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "明天晚上六點吃飯",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        },
+        {
+          "entity": "時間",
+          "startPos": 2,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "11/8 早上七點 吃飯",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "今天晚上吃飯",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        },
+        {
+          "entity": "時間",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "今天晚上七點吃飯",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        },
+        {
+          "entity": "時間",
+          "startPos": 2,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "明天中午看球賽",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        },
+        {
+          "entity": "時間",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "下週五下午考試",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "下周下午三點是有",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "時間",
+          "startPos": 2,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "明天下午吃早餐",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        },
+        {
+          "entity": "時間",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "今天晚上十點睡覺",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        },
+        {
+          "entity": "時間",
+          "startPos": 2,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "明天早上七點搭車",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        },
+        {
+          "entity": "時間",
+          "startPos": 2,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "明天下午三點和同事吃飯",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        },
+        {
+          "entity": "時間",
+          "startPos": 2,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "明天下午吃飯",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        },
+        {
+          "entity": "時間",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "明天晚上吃飯",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        },
+        {
+          "entity": "時間",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "明天下午喝",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        },
+        {
+          "entity": "時間",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "I didn't understand. Please choose an option from the list",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "你好啊",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "明天 早上 吃飯",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        },
+        {
+          "entity": "時間",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "10/11 早上吃飯",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "明天下午喝水",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        },
+        {
+          "entity": "時間",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "e",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "早上",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "早兒",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "明天晚上看電影",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        },
+        {
+          "entity": "時間",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "明天晚上吃案",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        },
+        {
+          "entity": "時間",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "今天晚上十點吃宵夜",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        },
+        {
+          "entity": "時間",
+          "startPos": 2,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "後天晚上上課",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        },
+        {
+          "entity": "時間",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "早上七點喝茶",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "時間",
+          "startPos": 0,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "今天早上吃冰",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        },
+        {
+          "entity": "時間",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "明天中午念ES",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        },
+        {
+          "entity": "時間",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "11/5 早上測試",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "明天下午三點草食",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        },
+        {
+          "entity": "時間",
+          "startPos": 2,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "明天下午喝茶",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        },
+        {
+          "entity": "時間",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "...",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "11/5 0700搭車",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "明天早上八點吃飯",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        },
+        {
+          "entity": "時間",
+          "startPos": 2,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "11/811/8",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "明天",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "明天下午搭車",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        },
+        {
+          "entity": "時間",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "名天晚上吃飯",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        },
+        {
+          "entity": "時間",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "今天中午出餐",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        },
+        {
+          "entity": "時間",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "你和阿姨",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "吃飯",
+      "intent": "新增事件",
+      "entities": []
+    },
+    {
+      "text": "明天早上搭車",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        },
+        {
+          "entity": "時間",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "11/8 早上七點吃飯",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "明天中午和加緯吃飯",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        },
+        {
+          "entity": "時間",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "嗚嗚嗚嗚嗚",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "安安",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "後天中午找人",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 1
+        },
+        {
+          "entity": "時間",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "11/5 早上八點 坐車",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "11/8 1800 測試",
+      "intent": "新增事件",
+      "entities": [
+        {
+          "entity": "日期",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "時間",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    }
+  ]
+}
