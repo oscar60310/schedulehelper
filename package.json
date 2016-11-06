@@ -1,0 +1,17 @@
+{
+  "name": "notifyme",
+  "version": "0.0.0",
+  "description": "notifyme",
+  "main": "server.js",
+  "author": {
+    "name": "Goofy"
+  },
+  "dependencies": {
+    "botbuilder": "^3.2.3",
+    "express": "^4.14.0",
+    "fs": "0.0.1-security",
+    "google-auth-library": "^0.9.9",
+    "googleapis": "^14.1.0",
+    "util": "^0.10.3"
+  }
+}
