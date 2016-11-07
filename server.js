@@ -121,7 +121,7 @@ bot.dialog('/check',[function(session){
   
 },function (session, results) {
         if (results.response) {
-        	session.sendTyping();
+        	//session.sendTyping();
         	calendar.addEvents(session.userData.token,datatmp,session,function(session,data){
         		if(data == null)
         		{

@@ -51,9 +51,12 @@ function addEvents(token,data,session,callback) {
 
   	var calendar = google.calendar('v3');
   	oauth2Client.credentials =token;
-  	console.log('ok');
-  	var start = new Date(data.date.getTime() - parseInt(timezone) * 60 * 60 * 1000);
-  	var end = new Date(data.date.getTime() - (parseInt(timezone)-1) * 60 * 60 * 1000); 
+  
+    // 轉換時區
+    var utc_unlocal = Date.UTC(data.date.getFullYear(),data.date.getMonth(),data.date.getDate(),data.date.getHours(),data.date.getMinutes(),0,0);
+  	var start  = new Date(utc_unlocal - parseInt(timezone) * 60 * 60 * 1000);
+    console.log('ok');
+  	var end = new Date(start.getTime() + 1 * 60 * 60 * 1000); 
   	var event = {
   		'summary': data.event,
   		'start': {'dateTime':start},
