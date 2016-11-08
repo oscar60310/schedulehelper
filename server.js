@@ -33,6 +33,9 @@ console.log('server started');
 var model = 'https://api.projectoxford.ai/luis/v1/application?id=' + process.env.LUIS_ID + '&subscription-key=' + process.env.LUIS_KEY;
 var recognizer = new builder.LuisRecognizer(model);
 var dialog = new builder.IntentDialog({ recognizers: [recognizer] });
+
+
+
 bot.dialog('/',[function(session,next){
 	if(session.userData.token == null)
 	{
@@ -265,6 +268,11 @@ var info = {
     {
         note: text.tutorial.add_event,
         title:'新增事件'
+    },
+    "關於我":
+    {
+    	note: text.tutorial.who_are_you,
+    	title: '我是誰'
     }
 };
 bot.dialog('/info',[
