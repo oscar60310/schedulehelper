@@ -9,7 +9,7 @@ function addDate(data)
     if(ds == null)
         return data;
     try {
-
+        var dsc = ds.replace('星期','禮拜').replace('周','禮拜').replace('週','禮拜');
         if(ds.indexOf('/') >= 0)
         {
             var date = new Date(data.date);
@@ -20,10 +20,21 @@ function addDate(data)
           //  data.event =  data.event.replace(data.datestring.replace(' ',''),'');
             data.complete.date = true;
         }
-        else if(!isNaN(datebase[ds]))
+        else if(!isNaN(datebase[dsc])) // 今天明天後天...
         {
             var date = new Date(data.date);
-            date.setTime(date.getTime() + datebase[ds] * 24 * 60 *60 * 1000);
+            date.setTime(date.getTime() + datebase[dsc] * 24 * 60 *60 * 1000);
+            data.date = date;
+            data.event =  data.event.replace(data.datestring,'');
+            data.complete.date = true;
+        }
+        else if(!isNaN(weekbase[dsc]))
+        {
+            var date = new Date(data.date);
+            var now = getLocalTime();
+            var bwtween = weekbase[dsc] - now.getDay();
+            bwtween = (bwtween<0)? bwtween + 7 : bwtween; 
+            date.setTime(now.getTime() + bwtween * 24 * 60 *60 * 1000);
             data.date = date;
             data.event =  data.event.replace(data.datestring,'');
             data.complete.date = true;
@@ -109,6 +120,14 @@ function addEvent(data)
         return data;
     }
 }
+function getLocalTime()
+{
+    var t = process.env.timefix || 8;
+    var now = new Date();
+    var utc = new Date(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(),  now.getUTCHours(), now.getUTCMinutes(), now.getUTCSeconds());
+    utc.setTime(utc.getTime() + t*60*60*1000);
+    return utc;
+}
 module.exports = {
     addDate: addDate,
     addTime: addTime,
@@ -149,3 +168,21 @@ var datebase = {
     '明天': 1,
     '後天': 2
 };
+var weekbase = {
+    '禮拜一': 1,
+    '禮拜二': 2,
+    '禮拜三': 3,
+    '禮拜四': 4,
+    '禮拜五': 5,
+    '禮拜六': 6,
+    '禮拜日': 0,
+    '禮拜天': 0,
+    '下禮拜一': 8,
+    '下禮拜二': 9,
+    '下禮拜三': 10,
+    '下禮拜四': 11,
+    '下禮拜五': 12,
+    '下禮拜六': 13,
+    '下禮拜日': 7,
+    '下禮拜天': 7,
+}

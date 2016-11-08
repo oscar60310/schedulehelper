@@ -176,7 +176,7 @@ bot.dialog('/askdate',[function(session){
 	datatmp = std.addDate(datatmp);
 	if(datatmp.complete.date == false)
 	{
-		builder.Prompts.text(session, "這個事項預計日期是? (您可以輸入11/1、明天等等)");
+		builder.Prompts.text(session, "這個事項預計日期是? (您可以輸入11/1、明天、星期四等等)");
 	}
 	else
 		session.replaceDialog('/asktime');
@@ -263,7 +263,7 @@ dialog.onDefault(builder.DialogAction.send("抱歉，我不太了解您的意思
 var info = {
     "新增事件":
     {
-        note:'您可以輸入：[日期] [時間] [事件]來新增提醒，像是"11/2 1800 吃晚餐"',
+        note: text.tutorial.add_event,
         title:'新增事件'
     }
 };
@@ -276,7 +276,7 @@ function (session, results){
     if (results.response) {
         var region = info[results.response.entity];
         session.send("有關%(title)s", region); 
-        session.send("%(note)s", region); 
+        session.send(region.note); 
         session.endDialog();
     } 
     else {
