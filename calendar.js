@@ -10,15 +10,16 @@ var redirectUrl = process.env.GOOGLE_RE;
 var apikey = process.env.GOOGLE_API_KEY;
 var timezone = process.env.TIME_ZONE | "0";
 var auth = new googleAuth();
-var oauth2Client = new auth.OAuth2(clientId, clientSecret, redirectUrl);
+var oauth2Client = new auth.OAuth2(clientId, clientSecret, redirectUrl + '');
 
 function getauthurl(session,next,callback)
 {
 	var auth = new googleAuth();
-  var oauth2Client = new auth.OAuth2(clientId, clientSecret, redirectUrl + '/code/-' + session.message.address.channelId + "-" + session.message.address.user.id + "-" + session.message.address.serviceUrl + "-" + session.message.address.conversation.id + "-");
+  var oauth2Client = new auth.OAuth2(clientId, clientSecret, redirectUrl + '/code');
 	var authUrl = oauth2Client.generateAuthUrl({
     	access_type: 'offline',
-    	scope: SCOPES
+    	scope: SCOPES,
+      state: JSON.stringify(session.message.address)
   	});
   	var urlshortener = google.urlshortener('v1');
   	urlshortener.url.insert({ resource: {longUrl: authUrl }},{url:'https://www.googleapis.com/urlshortener/v1/url?key='+apikey}, function (err, response) {
@@ -35,7 +36,7 @@ function getauthurl(session,next,callback)
 function getToken(code,session,callback)
 {
 
-  var oauth2Client = new auth.OAuth2(clientId, clientSecret, redirectUrl + '/code/-' + session.message.address.channelId + "-" + session.message.address.user.id + "-" + session.message.address.serviceUrl + "-" + session.message.address.conversation.id + "-");
+  var oauth2Client = new auth.OAuth2(clientId, clientSecret, redirectUrl + '/code');
 	oauth2Client.getToken(code, function(err, token) {
       if (err) {
       	console.log(err);

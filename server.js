@@ -21,17 +21,9 @@ var port = process.env.port || 1337;
 var app = express();
 var code_user ; 
 app.post('/api/messages', connector.listen());
-app.get('/code/*', function(res,req){
-	var args = res.url.split('-');
-	var addr = {
-    	channelId: args[1],
-    	user: {id: args[2]},
-    	bot: bot,
-    	serviceUrl: args[3],
-    	useAuth: true,
-    	conversation: {id: args[4]}
-	};
-    bot.beginDialog(addr,'/code',{code:res.url.split('?')[1].split('=')[1].replace('#','')});
+app.get('/code', function(res,req){
+	var addr = JSON.parse( decodeURIComponent(gup('state',res.url)));
+    bot.beginDialog(addr,'/code',{code:gup('code',res.url)});
     req.end('ok, now you can close this window.');
 });
 app.use('/doc',express.static('doc'));
@@ -74,6 +66,8 @@ bot.dialog('/',[function(session,next){
                     		builder.CardAction.openUrl(session,url,"Google Calendar 授權")
                     	])
             	]);
+
+
         	session.send(msg); 
 		});
 	}
@@ -325,4 +319,16 @@ var week = ['日','一','二','三','四','五','六'];
 function addzero(d)
 {
 	return (d<10)? ("0" + d.toString()) : d.toString();
+}
+
+
+function gup( name, url ) {
+	url = url.split('?')[1];
+	var args = url.split('&');
+	for(var i = 0;i<args.length;i++)
+	{
+		if(args[i].split('=')[0] == name)
+			return args[i].split('=')[1];
+	}
+    return null;
 }
