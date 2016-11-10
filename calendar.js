@@ -15,7 +15,7 @@ var oauth2Client = new auth.OAuth2(clientId, clientSecret, redirectUrl);
 function getauthurl(session,next,callback)
 {
 	var auth = new googleAuth();
-    var oauth2Client = new auth.OAuth2(clientId, clientSecret, redirectUrl);
+  var oauth2Client = new auth.OAuth2(clientId, clientSecret, redirectUrl + '/code/-' + session.message.address.channelId + "-" + session.message.address.user.id + "-" + session.message.address.serviceUrl + "-" + session.message.address.conversation.id + "-");
 	var authUrl = oauth2Client.generateAuthUrl({
     	access_type: 'offline',
     	scope: SCOPES
@@ -35,6 +35,7 @@ function getauthurl(session,next,callback)
 function getToken(code,session,callback)
 {
 
+  var oauth2Client = new auth.OAuth2(clientId, clientSecret, redirectUrl + '/code/-' + session.message.address.channelId + "-" + session.message.address.user.id + "-" + session.message.address.serviceUrl + "-" + session.message.address.conversation.id + "-");
 	oauth2Client.getToken(code, function(err, token) {
       if (err) {
       	console.log(err);
@@ -89,7 +90,6 @@ function addEvents(token,data,session,callback) {
 
 
 }
-
 
 module.exports = {
     getauthurl: getauthurl,

@@ -19,7 +19,21 @@ var connector = new builder.ChatConnector({
 var bot = new builder.UniversalBot(connector);
 var port = process.env.port || 1337;
 var app = express();
+var code_user ; 
 app.post('/api/messages', connector.listen());
+app.get('/code/*', function(res,req){
+	var args = res.url.split('-');
+	var addr = {
+    	channelId: args[1],
+    	user: {id: args[2]},
+    	bot: bot,
+    	serviceUrl: args[3],
+    	useAuth: true,
+    	conversation: {id: args[4]}
+	};
+    bot.beginDialog(addr,'/code',{code:res.url.split('?')[1].split('=')[1].replace('#','')});
+    req.end('ok, now you can close this window.');
+});
 app.use('/doc',express.static('doc'));
 // 開啟伺服器
 http.createServer(app).listen(port);
@@ -39,7 +53,8 @@ var dialog = new builder.IntentDialog({ recognizers: [recognizer] });
 bot.dialog('/',[function(session,next){
 	if(session.userData.token == null)
 	{
-		//console.log(session.userData);
+
+		
 		calendar.getauthurl(session,next,function(session,next,url){
 			if(url==null)
 			{
@@ -50,47 +65,36 @@ bot.dialog('/',[function(session,next){
 			var name = session.message.address.user.name;
 			if (name == null)
 				name ="";
+
 			var msg = new builder.Message(session)
             	.attachments([
                 	new builder.HeroCard(session)
                     	.text(util.format(text.dialog.request_google,name))
-                    	.buttons([
+                    	.buttons(	[
                     		builder.CardAction.openUrl(session,url,"Google Calendar 授權")
                     	])
             	]);
-        	session.send(msg);    
-        	session.beginDialog('/code',{re:false});
+        	session.send(msg); 
 		});
 	}
 	else
 		session.replaceDialog('/authed');
 
-},function(session,args){
-	session.userData.token = args.token;
-	session.send(text.dialog.introduction);
 }]);
 
 
 bot.dialog('/authed', dialog);
 bot.dialog('/code', [function(session,args){
-	
-	if(args.re)
-		builder.Prompts.text(session,text.dialog.tell_code_retry);
-	else
-		builder.Prompts.text(session,text.dialog.tell_code); 
-},function(session,args){
-
-	calendar.getToken(args.response,session,function(re,session){
-		if(re != null)
-		{
-			session.endDialogWithResult({token:re});
-		}
+	calendar.getToken(args.code,session,function(token,session){
+		if(token == null)
+			session.replaceDialog('/')
 		else
 		{
-			session.replaceDialog('/code',{re:true});
+			session.userData.token = token;
+			session.send(text.dialog.introduction);
+			session.endDialog();
 		}
 	});
-    
 
 }]);
 
